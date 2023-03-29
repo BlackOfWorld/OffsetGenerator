@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "dist/**/**.js.map": true,
+    }
+}

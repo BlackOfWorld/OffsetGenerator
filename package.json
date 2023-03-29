@@ -1,0 +1,38 @@
+{
+  "name": "OffsetGenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rmdir /q /s dist",
+    "prestart": "npm run build",
+    "build": "vite build --base ./dist",
+    "start": "node dist/index.js",
+    "release": "rmdir /q /s dist && npm run build && del /q /f /s dist\\*.map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@isomorphic-git/lightning-fs": "^4.6.0",
+    "buffer": "^6.0.3",
+    "isomorphic-fetch": "^3.0.0",
+    "isomorphic-git": "1.0.0-beta.36",
+    "js-yaml": "^4.1.0",
+    "requirejs": "^2.3.6",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@types/web": "^0.0.99",
+    "@typescript/lib-dom": "npm:@types/web@^0.0.99",
+    "esbuild": "^0.17.13",
+    "rollup": "^3.20.2",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1"
+  }
+}
